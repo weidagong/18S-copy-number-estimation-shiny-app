@@ -1,0 +1,44 @@
+ui <- fluidPage(
+  
+  # App title ----
+  titlePanel("18S copy number bias"),
+  fluidRow(
+    sidebarLayout(
+      sidebarPanel(h3("18S copy number across different species"),
+        sliderInput(inputId = "Diatom", label = "Diatom",
+                    min = 0, max = 1000, value = 10),
+        sliderInput(inputId = "Dinoflagellate", label = "Dinoflagellate",
+                    min = 0, max = 1000, value = 138),
+        sliderInput(inputId = "Haptophyte", label = "Haptophyte",
+                    min = 0, max = 1000, value = 48),
+        sliderInput(inputId = "Chlorophyte", label = "Chlorophyte",
+                    min = 0, max = 1000, value = 41)
+      ),
+  
+      mainPanel(
+        p("Composition of a simulated phytoplankton community with equal sequence abundance 
+          from four representative phytoplankton functional groups before and after 18S gene 
+          copy number correction. Correction is based on 18S gene copy number from the sliderInput
+          on the left", style = "font-size:20px"),
+        fluidRow(
+          column(4,
+                plotOutput("rawPlot")),
+          column(4,
+                plotOutput("correctedPlot"))
+        )
+      )
+    )
+  ),
+  
+  br(),
+  br(),
+  
+  fluidRow(p(" Geographic distribution of 18S gene copy number estimates for representative 
+             phytoplankton species plotted in relation to their isolation location.", 
+             style = "font-size:20px; text-align: center")),
+  fluidRow(
+    column(width = 12, 
+           img(src = "map.tif", width = 1200, style="display: block; margin-left: auto;
+               margin-right: auto;"))
+  )
+)
