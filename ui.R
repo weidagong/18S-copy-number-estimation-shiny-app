@@ -40,5 +40,18 @@ ui <- fluidPage(
     column(width = 12, 
            img(src = "map.tif", width = 1200, style="display: block; margin-left: auto;
                margin-right: auto;"))
-  )
+  ),
+  
+  br(),
+  br(),
+  br(),
+  
+  fluidRow(p(strong("Citation: "), 
+             a("Gong, W. and Marchetti, A., 2019. Estimation of 18S gene copy number in marine 
+               eukaryotic plankton using a next-generation sequencing approach.", 
+               href = "https://www.frontiersin.org/articles/10.3389/fmars.2019.00219/full"), 
+             em("Frontiers in Marine Science, 6, p.219."),
+             br(),
+             strong("Contact: "), "weidagong92@gmail.com")
+           )
 )
