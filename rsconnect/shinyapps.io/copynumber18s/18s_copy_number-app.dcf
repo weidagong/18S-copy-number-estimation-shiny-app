@@ -1,0 +1,10 @@
+name: 18s_copy_number-app
+title:
+username:
+account: copynumber18s
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 896044
+bundleId: 2070503
+url: https://copynumber18s.shinyapps.io/18s_copy_number-app/
+when: 1557344812.60953
